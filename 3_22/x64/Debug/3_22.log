@@ -13,4 +13,6 @@ D:\Long-walk-slowly-C\3_22\test.c(15,9): warning C4477: “printf”: 格式字�
 D:\Long-walk-slowly-C\3_22\test.c(15,9): message : 请考虑在格式字符串中使用“%zd”
 D:\Long-walk-slowly-C\3_22\test.c(16,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
 D:\Long-walk-slowly-C\3_22\test.c(16,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\3_22\test.c(17,10): warning C4013: “variable”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\3_22\test.c(18,8): warning C4013: “sum_ab”未定义；假设外部返回 int
   3_22.vcxproj -> D:\Long-walk-slowly-C\3_22\x64\Debug\3_22.exe
