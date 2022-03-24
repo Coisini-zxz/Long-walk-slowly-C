@@ -1,0 +1,30 @@
+﻿  add.c
+  test.c
+D:\Long-walk-slowly-C\p1-15\test.c(14,8): warning C4013: “Select”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\p1-15\test.c(25,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(25,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(26,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(26,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(27,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(27,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(28,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(28,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(29,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(29,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(30,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(30,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(31,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(31,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(142,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(142,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(143,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(143,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(144,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(144,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(140,18): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\Long-walk-slowly-C\p1-15\test.c(153,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(153,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\p1-15\test.c(155,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\p1-15\test.c(155,9): message : 请考虑在格式字符串中使用“%zd”
+  正在生成代码...
+  p1-15.vcxproj -> D:\Long-walk-slowly-C\p1-15\x64\Debug\p1-15.exe
