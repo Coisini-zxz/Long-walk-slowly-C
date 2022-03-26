@@ -11,7 +11,23 @@ int main()
 	// constant();
 	// string();
 	// Escape_character();
-	Select();
+	// Select();
+	// cycle();
+	// Add(123, 456);
+	// array();
+	// operator();
+	// arr_num();
+	// Compl();
+	// B_A_plusplus();
+	// Type_cast();
+	// Logical();
+	// conditions();
+	// Comma();
+	// Keywords_typedef();
+	// Keywords_static();
+	// define_constant();
+	define_macro();
+
 	return 0;
 
 }
@@ -174,4 +190,253 @@ int Select()
 	return 0;
 }
 
+// 循环语句
+int cycle()
+{
+	printf("快速学习C语言入门\n");
+	int line = 0;
+	while (line <= 200)
+	{
+		line++;
+		printf("我要继续努力敲代码\n");
+	}
+	if (line > 200)
+		printf("好offer\n");
+	return 0;
+}
 
+// 函数
+int Add(int x, int y)
+{
+	int z = x + y;
+	printf("%d\n",z);
+	return z;
+}
+
+// 数组
+int array()
+{
+	/*
+	int a = 1;
+	int b = 2;
+	int c = 3;
+	int d = 4;
+	......
+	*/
+	// 数组 - 一组同样类型的元素的集合
+	int arr[4] = { 1,2,3,4 };
+	char ch[5] = { 'a', 'b', 'c'}; // 创建 5个,但只给出三个 叫做 “不完全初始化” 剩余的默认为0. (注:单引号！！！跟python不一样)
+	int i = 0;
+	while (i <= 3)
+	{
+		printf("%d\n", arr[i]);
+		i++;
+	}
+	return 0;
+
+}
+
+
+// 初始操作符
+int operator()
+{
+	int a = 9 / 2;
+	float b = 9 / 2.0;
+	int c = 9 % 2;
+	printf("%d\n%f\n%d\n", a,b,c);
+	int d = 2;  
+	int e = d << 1; //左移操作符 -- 移动的是二进制位
+	printf("%d\n", e);
+	
+	int z = 1;
+	printf("%d\n", !z); // 0表示假 非0表示真
+	if (z)
+	{
+		// 如果a为真 执行
+	}
+	if (!z)
+	{
+		// 如果a为假 执行
+	}
+
+	return 0;
+}
+
+// 计算数组元素个数
+int arr_num()
+{
+	// 每个元素占4byte / sizeof是操作符 不是函数
+	int arr[10] = { 0 };
+	printf("%d\n", sizeof(arr)); //40
+	printf("%d\n", sizeof(arr[0])); //4
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	printf("%d\n", sz); //10
+	return 0;
+}
+
+// 按位取反
+int Compl()
+{
+	int a = 0;
+	printf("%d\n", ~a);
+	// 00000000000000000000000000000000 ---> 11111111111111111111111111111111(原码) --->10000000000000000000000000000000(反码)
+	// ---> 10000000000000000000000000000001(补码) ---> 得到 -1
+	// 二进制位取反：把所有二进制位取反	
+	/*
+	整数在内存中存储的是补码!!！
+	正数的原码反码补码相同
+	只针对负数！ 原码取反(符号位不变！)+1 得到补码
+	eg：-1 ：原码：10000000000000000000000000000001  (第一位 1 表示符号 1为负号)
+			 反码：11111111111111111111111111111110
+			 补码：11111111111111111111111111111111
+
+	*/
+	return 0;
+}
+
+// 前置++/后置++
+int B_A_plusplus()
+{
+	int a = 10;
+	int b = ++a; //前置++  :  先++ 后使用
+	printf("%d\n", b); // 11
+	printf("%d\n", a); // 11
+	
+	int q = 10;
+	int w = q++; // 后置++ : 先使用 后++
+	printf("%d\n", w); // 10
+	printf("%d\n", q); // 11
+	
+
+	// 不建议研究以下浪费时间研究的是错误的代码 不同编译器可能不同结果
+	//int a = 1;
+	//int b = (++a) + (++a) + (++a);
+	//printf("%d\n", b);
+
+	return 0;
+}
+
+// 强制类型转换 
+int Type_cast()
+{
+	// 加入 (类型) 前缀即可	
+	int a = (int)3.14;
+	printf("%d\n", a);
+	return 0;
+}
+
+// 逻辑操作符
+int Logical()
+{
+	int a = 3;
+	int b = 5;
+	int c = a && b;  // 且
+	// int c = a || b;  // 或
+
+	printf("%d\n", c);
+	return 0;
+}
+
+// 条件操作符(三目操作符)
+/*
+	exp1 ? exp2 : exp3
+	exp1 成立, exp2计算 整个表达式结构是:exp2的结果
+	exp1 不成立, exp3计算 整个表达式结构是:exp3的结果
+*/
+int conditions()
+{
+	int a = 0;
+	int b = 3;
+	int max = 0;
+
+	//if (a > b)
+	//	max = a;
+	//else
+	//	max = b;
+	max = a > b ? a : b;
+
+	printf("%d\n", max);
+	
+	return 0;
+}
+
+
+// 逗号表达式
+int Comma()
+{
+	// 2，4+5，6
+	int a = 0;
+	int b = 3;
+	int c = 5;
+	int d = (a = b + 2, c = a - 4, b = c + 2);
+	// 逗号表达式 是从左到右依次计算的 且整个表达式的结果是 最后一个表达式的结果
+	printf("%d\n", d);
+	return 0;
+}
+
+// typedef 关键字  - 顾名思义是类型定义，这里应该理解为类型重命名。
+typedef unsigned int u_int;
+int Keywords_typedef()
+{
+	unsigned int num = 100;
+	u_int num1 = 200;
+	printf("%d\n%d\n", num, num1);
+	return 0;
+} 
+
+// static 关键字 
+/*
+在C语言中：
+static是用来修饰变量和函数的
+1. 修饰局部变量 - 称为静态局部变量 - 改变了局部变量的生命周期(本质是更改了变量的存储类型)
+2. 修饰全局变量 - 称为静态全局变量 - 看add.c
+3. 修饰函数 - 称为静态函数         - 看add.c
+*/
+void test()
+{
+	// int a = 1;
+	static int a = 1;
+	a++;
+	printf("%d\n", a);
+}
+int	Keywords_static()
+{
+	// eg1
+	int i = 0;
+	while (i < 10)
+	{
+		test();
+		i++;
+	}
+	// eg2
+	// printf("%d\n", g__val) // 即便使用extern声明变量也无法使用 看add.c
+
+	// eg3
+	//int a = 1;
+	//int b = 3;
+	//int c = Add_(a, b);
+	//printf("%d\n", c);
+	//return 0;
+}
+
+//  #define 定义常量和宏
+// define 是一个预处理指令 
+// 1. define 定义符号
+#define zzz 100
+int define_constant()
+{
+	printf("%d\n", zzz);
+	return 0;
+}
+// 2.define 定义宏 
+// C语言中的“宏”即宏定义，是一种批量处理的称谓。
+// 计算机科学里的宏是一种抽象事物，它根据一系列预定义的规则替换一定的文本模式，解释器或编译器在遇到宏时会自动进行这一模式替换。
+#define ADD(X,Y) X+Y
+// #define ADD(X,Y) ((X)+(Y))
+int define_macro()
+{
+	printf("%d\n", ADD(2, 3)); // 5
+	printf("%d\n", 4*ADD(2, 3));// 11  ---> 4*2+3 替换的！！！ 妙啊！
+	// 要想得到 20 要像 注释那样定义！！！
+	return 0;
+}
