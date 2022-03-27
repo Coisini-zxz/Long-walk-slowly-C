@@ -1,0 +1,35 @@
+﻿  Attached.c
+  Primary.c
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(29,14): warning C4013: “define_macro”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(41,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(41,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(42,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(42,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(43,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(43,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(44,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(44,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(45,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(45,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(46,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(46,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(47,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(47,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(158,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(158,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(159,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(159,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(160,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(160,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(156,18): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(169,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(169,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(171,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(171,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(270,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(270,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(271,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(271,9): message : 请考虑在格式字符串中使用“%zd”
+  正在生成代码...
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\Primary.c(420): warning C4716: “Keywords_static”: 必须返回一个值
+  Section_1.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_初级\Section_1\x64\Debug\Section_1.exe
