@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Attached.c" />
+    <ClCompile Include="Pointer.c" />
     <ClCompile Include="Primary.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

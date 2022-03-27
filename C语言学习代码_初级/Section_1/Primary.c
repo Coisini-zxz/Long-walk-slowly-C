@@ -1,7 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS	1	// 放在开头 防止scanf报错
-#include <stdio.h> 	
+#include <stdio.h>
 #include <string.h>
 
+extern int pointer_1();
+extern int pointer_2();
+extern int pointer_3();
 int main()
 {
 	// data_type();
@@ -26,8 +29,10 @@ int main()
 	// Keywords_typedef();
 	// Keywords_static();
 	// define_constant();
-	define_macro();
-
+	// define_macro();
+	// pointer_1();
+	// pointer_2();
+	pointer_3();
 	return 0;
 
 }
@@ -416,7 +421,7 @@ int	Keywords_static()
 	//int b = 3;
 	//int c = Add_(a, b);
 	//printf("%d\n", c);
-	//return 0;
+	return 0;
 }
 
 //  #define 定义常量和宏
