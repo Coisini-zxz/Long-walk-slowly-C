@@ -32,7 +32,8 @@ int main()
 	// define_macro();
 	// pointer_1();
 	// pointer_2();
-	pointer_3();
+	// pointer_3();
+	Structural_body();
 	return 0;
 
 }
@@ -445,3 +446,29 @@ int define_macro()
 	// 要想得到 20 要像 注释那样定义！！！
 	return 0;
 }
+
+
+// 结构体
+
+
+struct Stu
+{
+	char name[20];
+	int age;
+	double score;
+};
+
+int Structural_body()
+{
+	struct Stu s = { "张三", 20, 85.5 }; // 结构体的创建和初始化
+	printf("1: %s %d %lf", s.name, s.age, s.score);
+
+	struct Stu* ps = &s;
+	// 解引用操作
+	printf("2: %s %d %lf", (*ps).name, (*ps).age, (*ps).score);
+	// 结构体指针 -> 成员变量名
+	printf("3: %s %d %lf", ps->name, ps->age, ps->score);
+	return 0;
+}
+
+
