@@ -259,11 +259,27 @@ int Fibonacci_number()
 
 	return 0;
 }
+// 递归  可以写效率非常低
+//int fib(int n)
+//{
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return fib(n - 1) + fib(n - 2);
+//}
 
-int fib(int n)
+// 非递归 (不考虑栈溢出下 效率非常高)
+int fib(int x)
 {
-	if (n <= 2)
-		return 1;
-	else
-		return fib(n - 1) + fib(n - 2);
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (x>2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		x--;
+	}
+	return c;
 }
