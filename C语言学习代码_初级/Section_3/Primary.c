@@ -109,6 +109,8 @@ int Binary_eg()
 	return 0;
 }
 
+// 为什么不在函数内部求s !!!!!!!!!!!!
+// 因为函数无法求出 传入参数数组部分的长度
 
 // int binary_search(int* a[], int k)
 int binary_search(int a[], int k, int s)

@@ -18,16 +18,5 @@
     <ClCompile Include="Primary.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sub.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="hnt.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="sub.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
