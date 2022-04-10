@@ -195,11 +195,23 @@ int arr_discuss()
 
 
 
+// 数组作为函数传参的时候 - 形参可以写成两种形式
+// 1. 指针形式
+// 2. 数组形式
 
 
+int arr[10];
+char ch[3][5];
+// 1.
+void test1(int* arr)
+{}
+// 2.
+void test2(int arr[10]) // = void test2(int arr[]) 数组的大小可以省略掉	
+{}
 
 
+void test3(char ch[3][5])
+{}
 
-
-
-
+void test4(char ch[][5])  // 列不能省略
+{}
