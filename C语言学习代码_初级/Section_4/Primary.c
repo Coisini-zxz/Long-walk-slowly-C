@@ -7,8 +7,8 @@ int main()
 	// Using_arrays();
 	// array_storage();
 	// array_2d_creaet();
-	// bubble();
-	arr_discuss();
+	bubble();
+	// arr_discuss();
 	return 0;
 }
 
@@ -125,37 +125,37 @@ int array_2d_creaet()
 }
 
 
-//int bubble()
-//{
-//	int arr[] = { 5,8,6,9,3,2,4,1,10,7 };
-//	// 计算数组内元素个数
-//	int sz = sizeof(arr) / sizeof(arr[0]); //为什么在这里传 前面说过 数组传参 传递过去形参部分的数组在函数内部是无法计算元素个数的
-//	bubble_sort(arr, sz);
-//	return 0;
-//}
-//
-//// 冒泡排序的思想  ： 两两相邻元素进行比较 并且可能的话需要排序
-//void bubble_sort(int arr[], int sz) // 形参arr 实质上是一个指针
-//{
-//	// 确定趟数
-//	int i = 0;
-//	for (i = 0; i = sz - 1; i++);
-//	{
-//		// 一趟冒泡排序的过程
-//		int j = 0;
-//		for (j = 0; j < sz-1-i; j++)
-//		{
-//			if (arr[j] > arr[j + 1])
-//			{
-//				// 交换
-//				int tmp = arr[j];
-//				arr[j] = arr[j + 1];
-//				arr[j + 1] = tmp;
-//
-//			}
-//		}
-//	}
-//}
+int bubble()
+{
+	int arr[] = { 5,8,6,9,3,2,4,1,10,7 };
+	// 计算数组内元素个数
+	int sz = sizeof(arr) / sizeof(arr[0]); //为什么在这里传 前面说过 数组传参 传递过去形参部分的数组在函数内部是无法计算元素个数的
+	bubble_sort(arr, sz);
+	return 0;
+}
+
+// 冒泡排序的思想  ： 两两相邻元素进行比较 并且可能的话需要排序
+void bubble_sort(int arr[], int sz) // 形参arr 实质上是一个指针
+{
+	// 确定趟数
+	int i = 0;
+	for (i = 0; i<sz-1; i++);
+	{
+		// 一趟冒泡排序的过程
+		int j = 0;
+		for (j = 0; j < sz-1-i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				// 交换
+				int tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+
+			}
+		}
+	}
+}
 
 
 

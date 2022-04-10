@@ -1,5 +1,5 @@
 ﻿  Primary.c
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(11,13): warning C4013: “arr_discuss”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(10,8): warning C4013: “bubble”未定义；假设外部返回 int
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(41,23): warning C4013: “strlen”未定义；假设外部返回 int
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(21,6): warning C4101: “arr0”: 未引用的局部变量
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(22,7): warning C4101: “ch0”: 未引用的局部变量
@@ -9,4 +9,5 @@ D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(54,9): warn
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(54,9): message : 请考虑在格式字符串中使用“%zd”
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(91,6): warning C4101: “arr”: 未引用的局部变量
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(92,7): warning C4101: “ch”: 未引用的局部变量
-  Section_4.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\x64\Debug\Section_4.exe
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(133,13): warning C4013: “bubble_sort”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(138,6): error C2371: “bubble_sort”: 重定义；不同的基类型
