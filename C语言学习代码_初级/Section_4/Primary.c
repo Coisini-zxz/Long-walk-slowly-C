@@ -130,7 +130,13 @@ int bubble()
 	int arr[] = { 5,8,6,9,3,2,4,1,10,7 };
 	// 计算数组内元素个数
 	int sz = sizeof(arr) / sizeof(arr[0]); //为什么在这里传 前面说过 数组传参 传递过去形参部分的数组在函数内部是无法计算元素个数的
+	void bubble_sort(int arr[], int sz); //声明
 	bubble_sort(arr, sz);
+	int i = 0;
+	for (i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+	{
+		printf("%d ", arr[i]);
+	}
 	return 0;
 }
 
@@ -139,11 +145,11 @@ void bubble_sort(int arr[], int sz) // 形参arr 实质上是一个指针
 {
 	// 确定趟数
 	int i = 0;
-	for (i = 0; i<sz-1; i++);
+	for (i = 0; i < sz - 1; i++) // for()后面别加; 淦！ 找了半天错误服了！
 	{
 		// 一趟冒泡排序的过程
 		int j = 0;
-		for (j = 0; j < sz-1-i; j++)
+		for (j = 0; j < sz-i-1; j++)
 		{
 			if (arr[j] > arr[j + 1])
 			{
@@ -156,7 +162,6 @@ void bubble_sort(int arr[], int sz) // 形参arr 实质上是一个指针
 		}
 	}
 }
-
 
 
 // 讨论 数组名到底是什么

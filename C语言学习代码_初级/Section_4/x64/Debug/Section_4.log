@@ -10,4 +10,4 @@ D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(54,9): mess
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(91,6): warning C4101: “arr”: 未引用的局部变量
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(92,7): warning C4101: “ch”: 未引用的局部变量
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(133,13): warning C4013: “bubble_sort”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(138,6): error C2371: “bubble_sort”: 重定义；不同的基类型
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_4\Primary.c(143,6): error C2371: “bubble_sort”: 重定义；不同的基类型
