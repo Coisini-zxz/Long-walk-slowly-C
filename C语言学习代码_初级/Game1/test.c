@@ -18,18 +18,45 @@ void game()
 	InitBoard(board, ROW, COL);
 	// 打印棋盘 - 本质打印数组内容
 	DisplayBoard(board, ROW, COL);
+	char ret = 0; // 接收游戏状态
 	while (1)
 	{
 		// 玩家下
 		PalyerMove(board, ROW, COL);
-
+		DisplayBoard(board, ROW, COL);
+		// 判断输赢
+		ret = IsWin(board, ROW, COL);
+		if (ret != 'C')
+		{
+			break;
+		}
+		// 电脑下
+		ComputerMove(board, ROW, COL);
+		DisplayBoard(board, ROW, COL);
+		ret = IsWin(board, ROW, COL);
+		if (ret != 'C')
+		{
+			break;
+		}
 	}
-
-
+	if (ret == '*')
+	{
+		printf("玩家赢了\n");
+	}
+	else if (ret == '#')
+	{
+		printf("电脑赢了\n");
+	}
+	else
+	{
+		printf("平局\n");
+	}
+	DisplayBoard(board, ROW, COL);
 }
 int main()
 {
 	int input = 0;
+	srand((unsigned int)time(NULL));
 	do
 	{
 		meau();
@@ -51,4 +78,3 @@ int main()
 	} while (input);
 	return 0;
 }
-
