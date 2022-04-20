@@ -7,7 +7,11 @@ int main()
 	// func1();
 	// func3();
 	// func4();
-	func5();
+	// func5();
+	// func7();
+	// func8();
+	// func9();
+	func11();
 	return 0;
 }
 
@@ -170,3 +174,112 @@ int func6()
 	// 允许指向数组元素的指针与指向数组最后一个元素后面的内存位置的指针进行比较 但是不允许与指向第一个元素之前的那个内存位置的指针进行比较
 	return 0;
 }
+
+//  指针和数组
+
+// 数组名是什么呢？
+int func7()
+{
+	int arr[10] = { 0 };
+	printf("%p\n", arr); //数组名是数组首元素的地址
+	printf("%p\n", &arr[0]);  // 打印会发现 二者相同
+	return 0;
+}
+
+int func8()
+{
+	int arr[10] = { 0 };
+	int* p = &arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		// printf("%p  <==> %p\n", &arr[i], p + i);
+		*(p + i) = i;
+	}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%p  <==> %p\n", &arr[i], p + i);
+		printf("%d \n", arr[i]);
+		printf("%d \n", *(p+i));
+	}
+	// 推导 --->
+	//  arr[2] <==> *(arr+2) <==> *(p+2) <==> *(2+p) <==> *(2+arr) <==> 2[arr] ????妙啊！
+	//  2[arr] <==> *(2+arr) 
+	int arr_[5] = { 1,2,3,4,5 };
+	printf("2[arr_]=%d <==> arr_[2]=%d\n", 2[arr_], arr_[2]);
+	 
+	// why? --->  :  []是一个操作符 2/arr 是他的两个操作数 交换位置一样
+	// eg: a+b <==> b+a  +号也是操作符！
+
+	// arr[2] 编译器最终会转换成 *(arr+2) p[2] 也最终会转换成 *(p+2)
+	int* p_ = &arr_;
+	printf("arr_[2] = %d\n", arr_[2]);
+	printf("p_[2] = %d\n", p_[2]);
+
+	return 0;
+}
+
+// 二级指针
+int func9()
+{
+	int a = 10;
+	int *pa = &a;  // pa 是一个指针  一级指针
+	int **ppa = &pa; // pa 也是一个变量 . &pa 取出pa 在内存中的起始地址
+	// 此时ppa 就是一个二级指针变量
+	// int*** pppa = &ppa;  三级指针  ！ 在这套娃呢？？
+	printf("%d\n" ,**ppa); // 10
+	return 0;
+}
+
+// 指针数组
+int func10()
+{
+	int arr[10];  // 整型数组  --- 存放整型的数组
+	char ch[5];  // 字符数组  --- 存放的是字符
+	// 指针数组 --- 存放指针的数组
+	int *parr[10]; // 整型指针的数组
+	char *pch[5]; // 字符指针的数组
+	return 0;
+}
+
+struct SS
+{
+	char c;
+	short b;
+	double d;
+};
+
+// 结构体初阶
+struct Stu
+{
+	// 类型
+	int age;
+	char name[20];
+	char id[20];
+	// 结构体的成员也可以是另一个结构体
+	struct SS sb; 
+}; // 分号不能丢！！！
+// } s1,s2;  这样也是创建了两个结构体变量  
+// 区别 ： s1, s2是全局变量 而下面的是局部变量
+
+int func11()
+{
+	// 对象
+	// 结构体变量初始化
+	struct Stu s =
+	{
+		21,
+		"Wxylkxy",
+		"201940440003",
+		{'w', 1,0}
+	};
+	// 注意 char类型需要 "" 
+	// 访问结构体变量
+	printf("%c\n", s.sb.c);
+	printf("%s\n", s.name);
+	struct Stu *ps = &s;
+	printf("%c\n", (*ps).sb.c);
+	printf("%c\n", ps->sb.c);
+	return 0;
+}
+
