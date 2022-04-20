@@ -6,4 +6,5 @@ C语言学习笔记/代码
 ---- Section_2 : 分支和循环语句  
 ---- Section_3 : 函数  
 ---- Section_4 : 数组  
----- Section_5 : 操作符    
+---- Section_5 : 操作符  
+---- Section_6 : 指针/结构体  
