@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS	1
 #include <stdio.h>
-
+#include <assert.h>
 
 int main()
 {
@@ -11,7 +11,8 @@ int main()
 	// func7();
 	// func8();
 	// func9();
-	func11();
+	// func11();
+	func12();
 	return 0;
 }
 
@@ -282,4 +283,36 @@ int func11()
 	printf("%c\n", ps->sb.c);
 	return 0;
 }
+
+// Ä£ÄâÊµÏÖstrlen()
+int func12()
+{
+	char arr[] = "Wxylkxyzz";
+	// int len = strlen(arr);
+	int len = MyStrlen(arr);
+	printf("len = %d\n", len);
+	return 0;
+}
+
+int MyStrlen(const char* str)
+{
+	assert(str != NULL);
+	// assert(str);
+	int count = 0;
+	while (*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return count;
+}
+
+
+
+
+
+
+
+
+
 

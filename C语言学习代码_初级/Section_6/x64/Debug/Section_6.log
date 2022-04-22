@@ -1,34 +1,35 @@
 ﻿  Primary.c
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(14,8): warning C4013: “func11”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(40,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(40,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(15,8): warning C4013: “func12”未定义；假设外部返回 int
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(41,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(41,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(42,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(42,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 1 冲突
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(42,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(42,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(43,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
 D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(43,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 1 冲突
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(48,7): warning C4013: “func2”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(38,1): warning C4047: “初始化”:“int *”与“int (*)[10]”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(39,1): warning C4047: “初始化”:“char *”与“int (*)[10]”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(55,1): warning C4047: “初始化”:“int *”与“int (*)[10]”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(111,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(111,9): message : 请考虑在格式字符串中使用“%lld”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(111,9): message : 请考虑在格式字符串中使用“%Id”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(111,9): message : 请考虑在格式字符串中使用“%I64d”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(115,32): warning C4133: “-”: 从“char *”到“int *”的类型不兼容
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(115,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(115,9): message : 请考虑在格式字符串中使用“%lld”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(115,9): message : 请考虑在格式字符串中使用“%Id”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(115,9): message : 请考虑在格式字符串中使用“%I64d”
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(125,21): warning C4013: “my_strlen”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(153,13): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(192,1): warning C4047: “初始化”:“int *”与“int (*)[10]”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(215,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(240,7): warning C4101: “parr”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(237,6): warning C4101: “arr”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(238,7): warning C4101: “ch”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(241,8): warning C4101: “pch”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(88): warning C4716: “func3”: 必须返回一个值
-D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(93): warning C4172: 返回局部变量或临时变量的地址: a
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(44,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(44,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 1 冲突
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(49,7): warning C4013: “func2”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(39,1): warning C4047: “初始化”:“int *”与“int (*)[10]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(40,1): warning C4047: “初始化”:“char *”与“int (*)[10]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(56,1): warning C4047: “初始化”:“int *”与“int (*)[10]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(112,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(112,9): message : 请考虑在格式字符串中使用“%lld”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(112,9): message : 请考虑在格式字符串中使用“%Id”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(112,9): message : 请考虑在格式字符串中使用“%I64d”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(116,32): warning C4133: “-”: 从“char *”到“int *”的类型不兼容
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(116,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(116,9): message : 请考虑在格式字符串中使用“%lld”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(116,9): message : 请考虑在格式字符串中使用“%Id”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(116,9): message : 请考虑在格式字符串中使用“%I64d”
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(126,21): warning C4013: “my_strlen”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(154,13): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(193,1): warning C4047: “初始化”:“int *”与“int (*)[10]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(216,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(241,7): warning C4101: “parr”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(238,6): warning C4101: “arr”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(239,7): warning C4101: “ch”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(242,8): warning C4101: “pch”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(292,20): warning C4013: “MyStrlen”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(89): warning C4716: “func3”: 必须返回一个值
+D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\Primary.c(94): warning C4172: 返回局部变量或临时变量的地址: a
   Section_6.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_初级\Section_6\x64\Debug\Section_6.exe
