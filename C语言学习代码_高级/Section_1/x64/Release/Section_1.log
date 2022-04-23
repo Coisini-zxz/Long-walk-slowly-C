@@ -1,0 +1,7 @@
+﻿  Primary.c
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_1\Primary.c(5,7): warning C4013: “func1”未定义；假设外部返回 int
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 5 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Section_1.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_高级\Section_1\x64\Release\Section_1.exe
