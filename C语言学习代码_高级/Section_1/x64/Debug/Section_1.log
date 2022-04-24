@@ -1,3 +1,3 @@
 ﻿  Primary.c
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_1\Primary.c(5,7): warning C4013: “func1”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_1\Primary.c(7,7): warning C4013: “func3”未定义；假设外部返回 int
   Section_1.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_高级\Section_1\x64\Debug\Section_1.exe
