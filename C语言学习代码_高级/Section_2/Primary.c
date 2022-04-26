@@ -4,7 +4,10 @@ int main()
 {
 	// func0(); //字符指针
     // practice0(); //题
-	func1(); //指针数组
+	// func1(); //指针数组
+	// func2(); //数组指针
+	// func3();
+	func4(); // eg
 	return 0;
 }
 
@@ -79,3 +82,110 @@ int func1()
     }
     return 0;
 }
+
+// 数组指针
+// 是一种指针 ---> 是指向数组的指针
+
+int func2()
+{
+    int a = 10;
+    int* pa = &a;
+    char ch = 'w';
+    char* pc = &ch;
+    int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+    // arr; // 数组名 是首元素的地址  - arr[0]的地址
+    // &arr; // 取出数组的地址
+    int (*parr)[10] = &arr; // 此时 parr就是一个数组指针 其中存放的数组的地址
+
+    // eg:
+    double* d[5];
+    double* (*pd)[5];
+    return 0;
+}
+
+int func3()
+{
+    int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+    //printf("%p\n", arr);
+    //printf("%p\n", &arr);
+    // 上面 虽然输出一样 但是意义不一样
+
+    // 这里也是 虽然输出一样 但是意义不一样
+    int* p1 = arr;
+    int (*p2)[10] = &arr;
+    printf("%p\n", p1);      // 000000E7ACBAF968   差了 4 即 一个整形
+    printf("%p\n", p1+1);  // 000000E7ACBAF96C  
+    printf("%p\n", p2);      // 000000E7ACBAF968
+    printf("%p\n", p2+1);  // 000000E7ACBAF990    差了 16进制的28 即 10进制 的40 即一个数组的长度 
+
+    // 其实(*p2) 此时就是数组名
+    // 不建议以下写法
+    int i = 0;
+    for (i = 0; i < 10; i++)
+    {
+        printf("%d\n", (*p2)[i]);
+        // printf("%d\n", *((*p2)+i));
+    }
+    return 0;
+}
+
+/*
+数组名是数组首元素的地址
+但是有两个例外
+1. sizeof(数组名)   -  数组名表示整个数组， 计算的是整个数组的大小 单位是字节
+2. &数组名  -  数组名表示整个数组， 取出的是整个数组的地址
+*/
+
+int func4()
+{
+    int arr[3][5] = { {1,2,3,4,5},{2,3,4,5,6}, {3,4,5,6,7} };
+    // 原来的方式
+    //void print1(int arr[3][5], int r, int c);
+    //print1(arr, 3, 5);
+
+    // 利用数组指针
+    void print2(int(*p)[5], int r, int c);
+    print2(arr, 3, 5);
+    return 0;
+}
+
+void print1(int arr[3][5], int r, int c)
+{
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+// p 是一个数组指针
+// 二维数组的数组名表示 首元素的地址；
+// 二维数组的首元素是谁呢？ ---> 是第一行
+void print2(int (*p)[5], int r, int c)
+{
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("%d ", *(*(p + i) + j));
+        }
+        printf("\n");
+    }
+}
+
+
+/*
+* 
+int (*parr2)[10];  -  数组指针  指向一个数组 数组十个元素 每个元素的类型是int
+int (*parr3[10])[5];  -  是一个 存储数组指针的数组 该数组能够存放10个数组指针 每个数组指针 能够指向一个数组 数组五个元素 每个元素是int类型
+parr3[10] 首先是一个数组  假设先拿掉 , int (*   )[5] 是一个数组指针 指向了一个数组 数组内每个元素类型都是int
+再把 这个数组指针存入 parr3[10] 这个数组 
+parr3[10] 十个元素 每个元素就是一个数组指针
+*/
