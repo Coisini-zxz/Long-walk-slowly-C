@@ -1,5 +1,11 @@
 ﻿  Primary.c
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(10,7): warning C4013: “func4”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(102,15): warning C4101: “pd”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(101,13): warning C4101: “d”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(26,10): warning C4013: “func9”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(119,15): warning C4101: “pd”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(118,13): warning C4101: “d”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(309,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(351,23): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(376,21): warning C4013: “strlen”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(409,13): warning C4098: “print3”:“void”函数返回值
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(470,1): warning C4047: “初始化”:“char”与“char *”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(575): warning C4716: “func8”: 必须返回一个值
   Section_2.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\x64\Debug\Section_2.exe
