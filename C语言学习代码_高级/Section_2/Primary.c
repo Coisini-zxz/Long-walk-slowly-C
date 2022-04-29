@@ -25,7 +25,8 @@ int main()
     // func8(); // 函数指针数组
     // func9(); // 这到底有什么用呢？ eg 写一个计算器
     // func10(); // 由冒泡排序做引子
-    func11(); // 模拟qsrot();
+    // func11(); // qsrot()学习
+    func12(); // 模仿qsort函数 来实现 冒泡排序的一个通用算法
 
 	return 0;
 }
@@ -707,10 +708,12 @@ void qsort (void* base, // base中存放的是待排序数据中第一个对象�
 void func11_test1()
 {
     // 整形数据的排序
-    int arr[10] = { 9,8,7,6,5,4,3,2,1,0 };
+    /*int arr[10] = { 9,8,7,6,5,4,3,2,1,0 };*/
+    int arr[10] = { 8,5,6,7,4,3,9,0,1,2 };
     int sz = sizeof(arr) / sizeof(arr[0]);
     int cmp_int(const void*, const void*);
-    // 排序
+    // 排序 
+    // 升序降序 更改 cmp_int即可
     qsort(arr, sz, sizeof(arr[0]), cmp_int);
     // 打印
     print_arr(arr, sz);
@@ -742,6 +745,8 @@ void func11_test2()
     // 按照名字排序
     qsort(s, sz, sizeof(s[0]), sort_by_name);
 }
+
+// 模仿qsort函数 来实现 冒泡排序的一个通用算法
 int func11()
 {
     // func11_test1();
@@ -752,4 +757,32 @@ int func11()
 int cmp_int(const void* e1, const void* e2)
 {
     return *(int*)e1 - *(int*)e2;
+    // return *(int*)e2 - *(int*)e1;
+}
+
+
+int func12()
+{
+
+}
+
+void bubble_sort_up(void* base,
+    int sz,
+    int width,
+    int (*cmp)(const void*, const void*)
+)
+{
+    int i = 0;
+    for (i = 0; i < sz - 1; i++)
+    {
+        int j = 0;
+        for (j = 0; j < sz - 1 - i; j++)
+        {
+            if (cmp((char*)base+j*width, (char*)base + (j+1) * width)>0)
+            {
+                // 交换;
+
+            }
+        }
+    }
 }
