@@ -23,7 +23,9 @@ int main()
     // func6();  // 二级指针传参
     // func7(); // 函数指针
     // func8(); // 函数指针数组
-    func9();
+    // func9(); // 这到底有什么用呢？ eg 写一个计算器
+    // func10(); // 由冒泡排序做引子
+    func11(); // 模拟qsrot();
 
 	return 0;
 }
@@ -644,3 +646,110 @@ void meau()
 }
 // 当你不只需要加减乘除时 需要的更多时 总不能一直写case吧？
 // 这时候就用到的 函数指针数组
+
+
+int func10()
+{
+    int arr[10] = { 9,8,7,6,5,4,3,2,1,0 };
+    int sz = sizeof(arr) / sizeof(arr[0]);
+
+    void bubble_sort(int [], int);
+    void print_arr(int[], int);
+
+    print_arr(arr, sz);
+    bubble_sort(arr, sz);
+    print_arr(arr, sz);
+    return 0;
+}
+
+void bubble_sort(int arr[], int sz)
+{
+    int i = 0;
+    // 升序
+    // 进去一次就是一趟冒泡排序
+    for (i = 0; i < sz - 1; i++)
+    {
+        int j = 0;
+        for (j = 0; j <sz-1-i ; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                // 交换
+                int tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            }
+        }
+    }
+}
+
+void print_arr(int arr[], int sz)
+{
+    int i = 0;
+    for (i = 0; i < sz; i++)
+    {
+        printf("%d\n", arr[i]);
+    }
+}
+
+// qsort();  快速排序 库函数
+// qsort 什么类型的数据都能排 - 整形/字符串/结构体数据都能排
+// 以冒泡排序的思想 来实现一个qsort函数
+
+/*
+查看文档:
+void qsort (void* base, // base中存放的是待排序数据中第一个对象的地址
+                    size_t num, // 排序元素的个数
+                    size_t, size, // 排序数据中一个元素的大小 单位是字节
+                    int (*cmp)(const void*, const void*) // 用来比较待排序数据中的两个元素的函数
+)
+*/
+void func11_test1()
+{
+    // 整形数据的排序
+    int arr[10] = { 9,8,7,6,5,4,3,2,1,0 };
+    int sz = sizeof(arr) / sizeof(arr[0]);
+    int cmp_int(const void*, const void*);
+    // 排序
+    qsort(arr, sz, sizeof(arr[0]), cmp_int);
+    // 打印
+    print_arr(arr, sz);
+}
+
+struct MyStruct
+{
+    char name[20];
+    int age;
+};
+
+int sort_by_age(const void* e1, const void* e2)
+{
+    return ((struct MyStruct*)e1)->age - ((struct MyStruct*)e1)->age;
+}
+
+int sort_by_name(const void* e1, const void* e2)
+{
+    return strcmp(((struct MyStruct*)e1)->name, ((struct MyStruct*)e2)->name);
+}
+
+void func11_test2()
+{
+    // 使用qsort函数排序结构体数据
+    struct MyStruct s[] = { {"ccc",58} , {"aaa",18},  {"bbb", 45}};
+    int sz = sizeof(s) / sizeof(s[0]);
+    // 按照年龄排序
+    // qsort(s, sz, sizeof(s[0]), sort_by_age);
+    // 按照名字排序
+    qsort(s, sz, sizeof(s[0]), sort_by_name);
+}
+int func11()
+{
+    // func11_test1();
+    func11_test2();
+    return 0;
+}
+
+int cmp_int(const void* e1, const void* e2)
+{
+    return *(int*)e1 - *(int*)e2;
+}
