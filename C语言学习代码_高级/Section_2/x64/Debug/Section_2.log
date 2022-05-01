@@ -1,13 +1,34 @@
 ﻿  Primary.c
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(28,11): warning C4013: “func11”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(121,15): warning C4101: “pd”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(120,13): warning C4101: “d”: 未引用的局部变量
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(311,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(353,23): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(378,21): warning C4013: “strlen”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(411,13): warning C4098: “print3”:“void”函数返回值
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(472,1): warning C4047: “初始化”:“char”与“char *”的间接级别不同
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(715,10): warning C4013: “qsort”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(733,18): warning C4013: “strcmp”未定义；假设外部返回 int
-D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(577): warning C4716: “func8”: 必须返回一个值
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(30,7): warning C4013: “v1”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(122,15): warning C4101: “pd”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(121,13): warning C4101: “d”: 未引用的局部变量
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(312,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(354,23): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(379,21): warning C4013: “strlen”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(412,13): warning C4098: “print3”:“void”函数返回值
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(473,1): warning C4047: “初始化”:“char”与“char *”的间接级别不同
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(717,10): warning C4013: “qsort”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(735,18): warning C4013: “strcmp”未定义；假设外部返回 int
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(796,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(796,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(797,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(797,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(798,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(798,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(799,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(799,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(800,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(800,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(801,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(801,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(802,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(802,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(803,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(803,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(804,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(804,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(805,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(805,12): message : 请考虑在格式字符串中使用“%zd”
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(578): warning C4716: “func8”: 必须返回一个值
+D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\Primary.c(767): warning C4716: “func12”: 必须返回一个值
   Section_2.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_高级\Section_2\x64\Debug\Section_2.exe
