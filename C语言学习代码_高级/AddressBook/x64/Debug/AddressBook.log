@@ -1,5 +1,3 @@
 ﻿  Contact.c
-D:\Long-walk-slowly-C\C语言学习代码_高级\AddressBook\Contact.c(48,10): warning C4098: “PrintContact”:“void”函数返回值
-  test.c
-  正在生成代码...
+D:\Long-walk-slowly-C\C语言学习代码_高级\AddressBook\Contact.c(104,10): warning C4098: “PrintContact”:“void”函数返回值
   AddressBook.vcxproj -> D:\Long-walk-slowly-C\C语言学习代码_高级\AddressBook\x64\Debug\AddressBook.exe
