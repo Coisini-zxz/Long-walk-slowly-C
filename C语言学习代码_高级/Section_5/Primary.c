@@ -49,28 +49,28 @@ int main()
 }
 
 
-
-int func0()
-{
-	//代码1
-	int num = 0;
-	scanf("%d", &num);
-	int arr[num] = { 0 };
-	//代码2
-	int* ptr = NULL;
-	ptr = (int*)malloc(num * sizeof(int));
-	if (NULL != ptr)//判断ptr指针是否为空
-	{
-		int i = 0;
-		for (i = 0; i < num; i++)
-		{
-			*(ptr + i) = 0;
-		}
-	}
-	free(ptr);//释放ptr所指向的动态内存
-	ptr = NULL;//是否有必要？
-	return 0;
-}
+//
+//int func0()
+//{
+//	//代码1
+//	int num = 0;
+//	scanf("%d", &num);
+//	int arr[num] = { 0 };
+//	//代码2
+//	int* ptr = NULL;
+//	ptr = (int*)malloc(num * sizeof(int));
+//	if (NULL != ptr)//判断ptr指针是否为空
+//	{
+//		int i = 0;
+//		for (i = 0; i < num; i++)
+//		{
+//			*(ptr + i) = 0;
+//		}
+//	}
+//	free(ptr);//释放ptr所指向的动态内存
+//	ptr = NULL;//是否有必要？
+//	return 0;
+//}
 
 
 /*
@@ -122,33 +122,33 @@ void* realloc (void* ptr, size_t size);
 切记：
 动态开辟的空间一定要释放，并且正确释放
 */
-
-int func2()
-{
-	int* ptr = (int*)malloc(100);
-	if (ptr != NULL)
-	{
-		//业务处理
-	}
-	else
-	{
-		exit(EXIT_FAILURE);
-	}
-	//扩展容量
-	//代码1
-	ptr = (int*)realloc(ptr, 1000);//这样可以吗？(如果申请失败会如何？)
-
-	//代码2
-	int* p = NULL;
-	p = realloc(ptr, 1000);
-	if (p != NULL)
-	{
-		ptr = p;
-	}
-	//业务处理
-	free(ptr);
-	return 0;
-}
+//
+//int func2()
+//{
+//	int* ptr = (int*)malloc(100);
+//	if (ptr != NULL)
+//	{
+//		//业务处理
+//	}
+//	else
+//	{
+//		exit(EXIT_FAILURE);
+//	}
+//	//扩展容量
+//	//代码1
+//	ptr = (int*)realloc(ptr, 1000);//这样可以吗？(如果申请失败会如何？)
+//
+//	//代码2
+//	int* p = NULL;
+//	p = realloc(ptr, 1000);
+//	if (p != NULL)
+//	{
+//		ptr = p;
+//	}
+//	//业务处理
+//	free(ptr);
+//	return 0;
+//}
 
 
 // 常见的动态内存错误
@@ -165,21 +165,21 @@ void test()
 	//  所以 需要对malloc的返回值 进行判断
 }
 // 3.2 对动态开辟空间的越界访问
-void test()
-{
-	int i = 0;
-	int* p = (int*)malloc(10 * sizeof(int));
-	if (NULL == p)
-	{
-		exit(EXIT_FAILURE);
-	}
-	for (i = 0; i <= 10; i++)
-	{
-		*(p + i) = i;//当i是10的时候越界访问
-	}
-	free(p);
-	p = NULL;
-}
+//void test()
+//{
+//	int i = 0;
+//	int* p = (int*)malloc(10 * sizeof(int));
+//	if (NULL == p)
+//	{
+//		exit(EXIT_FAILURE);
+//	}
+//	for (i = 0; i <= 10; i++)
+//	{
+//		*(p + i) = i;//当i是10的时候越界访问
+//	}
+//	free(p);
+//	p = NULL;
+//}
 
 
 // 3.3 对非动态开辟内存使用free释放
@@ -313,4 +313,85 @@ void Test(void)
 错解 :  提前free了 应该拿到后面
 考点不在这里   free之后并不会将其置空 所以会进入if内 又给str内放字符 此时已经造成了非法访问 因为已经free掉了 
 正解 : free 之后 置空
+*/
+
+
+/*
+柔性数组
+也许你从来没有听说过柔性数组（flexible array）这个概念，但是它确实是存在的。
+C99 中，结构中的最后一个元素允许是未知大小的数组，这就叫做『柔性数组』成员。
+*/
+
+typedef struct st_type
+{
+	int i;
+	int a[0];//柔性数组成员
+}type_a;
+
+
+/*
+柔性数组的特点：
+--结构中的柔性数组成员前面必须至少一个其他成员。
+--sizeof 返回的这种结构大小不包括柔性数组的内存。
+--包含柔性数组成员的结构用malloc ()函数进行内存的动态分配，并且分配的内存应该大于结构的大小，以适应柔性数组的预期大小
+
+
+//code1
+typedef struct st_type
+{
+ int i;
+ int a[0];//柔性数组成员
+}type_a;
+printf("%d\n", sizeof(type_a));//输出的是4
+
+
+//代码1
+int i = 0;
+type_a *p = (type_a*)malloc(sizeof(type_a)+100*sizeof(int));
+//业务处理
+p->i = 100;
+for(i=0; i<100; i++)
+{
+ p->a[i] = i;
+}
+free(p);
+*/
+
+
+/*
+柔性数组的优势
+ 
+//代码2
+typedef struct st_type
+{
+ int i;
+ int *p_a;
+}type_a;
+type_a *p = (type_a *)malloc(sizeof(type_a));
+p->i = 100;
+p->p_a = (int *)malloc(p->i*sizeof(int));
+//业务处理
+for(i=0; i<100; i++)
+{
+ p->p_a[i] = i;
+}
+//释放空间
+free(p->p_a);
+p->p_a = NULL;
+free(p);
+p = NULL;
+
+
+上述 代码1 和 代码2 可以完成同样的功能，
+但是 方法1 的实现有两个好处：
+
+第一个好处是：方便内存释放
+如果我们的代码是在一个给别人用的函数中，你在里面做了二次内存分配，并把整个结构体返回给
+用户。用户调用free可以释放结构体，但是用户并不知道这个结构体内的成员也需要free，所以你
+不能指望用户来发现这个事。所以，如果我们把结构体的内存以及其成员要的内存一次性分配好
+了，并返回给用户一个结构体指针，用户做一次free就可以把所有的内存也给释放掉。
+
+第二个好处是：这样有利于访问速度.
+连续的内存有益于提高访问速度，也有益于减少内存碎片。（其实，我个人觉得也没多高了，反正
+你跑不了要用做偏移量的加法来寻址）
 */
