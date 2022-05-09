@@ -77,6 +77,8 @@ int main()
 			PrintContact(&con);
 			break;
 		case Exit:
+			// 保存信息到文件
+			SaveContact(&con);
 			// 销毁通讯录
 			DestoryContact(&con);
 			printf("退出通讯录!\n");
@@ -88,3 +90,9 @@ int main()
 	} while (input);
 	return 0;
 }
+
+/*
+老子真坠了 
+LoadContact函数内 文件的读写 一定是双引号
+单引号不行！！！我淦找半天bug
+*/

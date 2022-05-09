@@ -9,6 +9,7 @@
 //	memset(pc->data, 0, sizeof(pc->data));
 //}
 
+
 // 动态版本
 void InitContact(Contact* pc) 
 {
@@ -22,8 +23,10 @@ void InitContact(Contact* pc)
 
 	pc->sz = 0;  // 初始化后 默认是0
 	pc->capacity = DEFAULT_SZ;
-
+	// 加载文件
+	LoadContact(pc);
 }
+
 
 // 静态版本 增加联系人
 //void AddContact(Contact* pc)
@@ -49,27 +52,11 @@ void InitContact(Contact* pc)
 //}
 
 
-
 // 动态版本 增加联系人
 void AddContact(Contact* pc)
 {
 	// 考虑增容
-	if (pc->sz == pc->capacity)
-	{
-		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (pc->capacity+INT_SZ)*sizeof(PeoInfo));
-		if (ptr != NULL)
-		{
-			pc->data = ptr;
-			pc->capacity += INT_SZ;
-			printf("增容成功！\n");
-		}
-		else
-		{
-			perror("AddContact");
-			printf("增加联系人失败\n");
-			return;
-		}
-	}
+	CheckCapacioy(pc);
 	// 增加一个人信息
 	printf("请输入名字:> ");
 	scanf("%s", pc->data[pc->sz].Name);
@@ -84,7 +71,6 @@ void AddContact(Contact* pc)
 	pc->sz++;
 	printf("增加成功！\n");
 }
-
 
 
 void PrintContact(const Contact* pc)
@@ -104,6 +90,7 @@ void PrintContact(const Contact* pc)
 	return 0;
 }
 
+
 static int FindByName(Contact* pc, char name[])
 {
 	int i = 0;
@@ -116,6 +103,8 @@ static int FindByName(Contact* pc, char name[])
 	}
 	return -1;
 }
+
+
 void DelContact(Contact* pc)
 {
 	char name[MAX_NAME] = {0};
@@ -144,6 +133,7 @@ void DelContact(Contact* pc)
 	printf("删除成功 ！\n");
 }
 
+
 void SearchContact(Contact* pc)
 {
 	char name[MAX_NAME] = { 0 };
@@ -166,6 +156,7 @@ void SearchContact(Contact* pc)
 			);
 	}
 }
+
 
 void ModifyContact(Contact* pc)
 {
@@ -194,10 +185,74 @@ void ModifyContact(Contact* pc)
 	}
 }
 
+
 void DestoryContact(Contact* pc)
 {
 	free(pc->data);
 	pc->data = NULL;
 	pc->sz = 0;
 	pc->capacity = 0;
+}
+
+
+void SaveContact(Contact* pc)
+{
+	FILE* pf = fopen("Contact.dat", "w");
+	if (pf == NULL)
+	{
+		perror("SaveContact");
+		return 1; 
+	}
+	// 写文件
+	int i = 1;
+	for (i = 0; i < pc->sz; i++)
+	{
+		fwrite(pc->data+i, sizeof(PeoInfo), 1, pf);
+	}
+	// 关闭文件
+	fclose(pf);
+	pf = NULL;
+}
+
+
+void LoadContact(Contact* pc)
+{
+	FILE* pf = fopen("Contact.dat", "r");
+	if (pf == NULL)
+	{
+		perror("LoadContact");
+		return;
+	}
+	// 读文件
+	PeoInfo tmp = { 0 };
+	while (fread(&tmp, sizeof(PeoInfo), 1, pf))
+	{
+		CheckCapacioy(pc);
+		pc->data[pc->sz] = tmp;
+		pc->sz++;
+	}
+	// 关闭文件
+	fclose(pf);
+	pf = NULL;
+}
+
+
+void CheckCapacioy(Contact* pc)
+{
+	if (pc->sz == pc->capacity)
+	{
+		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (pc->capacity + INT_SZ) * sizeof(PeoInfo));
+		if (ptr != NULL)
+		{
+			pc->data = ptr;
+			pc->capacity += INT_SZ;
+			printf("增容成功！\n");
+		}
+		else
+		{
+			perror("AddContact");
+			printf("增加联系人失败\n");
+			return;
+		}
+	}
 }

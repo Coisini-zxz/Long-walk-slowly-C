@@ -23,7 +23,6 @@ typedef struct PeoInfo
 	char Addr[MAX_ADDR];
 }PeoInfo;
 
-
 //// 通讯录 静态版本
 //typedef struct Contact
 //{
@@ -32,7 +31,7 @@ typedef struct PeoInfo
 //
 //}Contact;
 
-// 通讯录 静态版本
+// 通讯录 动态版本
 typedef struct Contact
 {
 	PeoInfo *data;  // data -> 指向动态申请的空间 用来存放联系人的信息 
@@ -61,3 +60,12 @@ void ModifyContact(Contact* pc);
 
 // 销毁通讯录
 void DestoryContact(Contact* pc);
+
+// 保存通讯录信息到文件
+void SaveContact(Contact* pc);
+
+// 加载文件内容到通讯录
+void LoadContact(Contact* pc);
+
+// 考虑增容
+void CheckCapacioy(Contact* pc);
