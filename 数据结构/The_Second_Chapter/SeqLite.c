@@ -5,7 +5,19 @@ void SeqListInit(SL* ps)
 	ps->a = NULL;
 	ps->Maxsize = ps->length = 0;
 }
-
+void SeqListPrint(SL* ps) 
+{
+	for (int i = 0; i < ps->length; i++)
+	{
+		printf("%d ", ps->a[i]);
+	}
+}
+void SeqListDestory(SL* ps) 
+{
+	free(ps->a);
+	ps->a = NULL;
+	ps->Maxsize = ps->length = 0;
+}
 void SeqListPushBack(SL* ps, Elemtype x)
 {
 	// 如果 没有空间 或者 空间不足 ---> 扩容

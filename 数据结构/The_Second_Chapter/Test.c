@@ -9,6 +9,7 @@ void TestSeqList1()
 	SeqListPushBack(&sl, 3);
 	SeqListPushBack(&sl, 4);
 	SeqListPushBack(&sl, 5);
+	SeqListPrint(&sl);
 }
 
 int main()

@@ -13,9 +13,11 @@ typedef struct SeqList
 
 // 接口函数
 void SeqListInit(SL* ps);    //  初始化
+void SeqListPrint(SL* ps);  //  打印
 void SeqListPushBack(SL* ps, Elemtype x);  // 尾插
 void SeqListPopBack(SL* ps);                       // 尾删
 void SeqListPushFront(SL* ps, Elemtype x); // 头插
 void SeqListPopFront(SL* ps);                      // 头删
+void SeqListDestory(SL* ps);  // 销毁
 
 
