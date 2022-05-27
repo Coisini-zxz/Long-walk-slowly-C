@@ -93,11 +93,105 @@ void problem4()
 	SeqListPushBack(&sl, 7);
 	SeqListPrint(&sl);
 
-	Del_s_t(&sl, 2, 4);
+	Del_s_t_order(&sl, 2, 4);
 	SeqListPrint(&sl);
 
 	SeqListDestory(&sl);
 }
+
+
+void problem5()
+{
+	SL sl;
+	SeqListInit(&sl);
+	SeqListPushBack(&sl, 1);
+	SeqListPushBack(&sl, 7);
+	SeqListPushBack(&sl, 2);
+	SeqListPushBack(&sl, 9);
+	SeqListPushBack(&sl, 8);
+	SeqListPushBack(&sl, 4);
+	SeqListPushBack(&sl, 3);
+	SeqListPrint(&sl);
+
+	Del_s_t_disorder(&sl, 2, 4);
+	SeqListPrint(&sl);
+
+	SeqListDestory(&sl);
+}
+
+
+void problem6()
+{
+	SL sl;
+	SeqListInit(&sl);
+	SeqListPushBack(&sl, 1);
+	SeqListPushBack(&sl, 2);
+	SeqListPushBack(&sl, 2);
+	SeqListPushBack(&sl, 2);
+	SeqListPushBack(&sl, 3);
+	SeqListPushBack(&sl, 3);
+	SeqListPushBack(&sl, 4);
+	SeqListPrint(&sl);
+
+	Del_same(&sl);
+	SeqListPrint(&sl);
+
+	SeqListDestory(&sl);
+}
+
+
+void problem7()
+{
+	SL sl1;
+	SeqListInit(&sl1);
+	SeqListPushBack(&sl1, 1);
+	SeqListPushBack(&sl1, 3);
+	SeqListPushBack(&sl1, 5);
+	SeqListPushBack(&sl1, 7);
+	SeqListPushBack(&sl1, 9);
+	SeqListPushBack(&sl1, 11);
+	printf("%s", "s1£º");
+	SeqListPrint(&sl1);
+
+	SL sl2;
+	SeqListInit(&sl2);
+	SeqListPushBack(&sl2, 2);
+	SeqListPushBack(&sl2, 4);
+	SeqListPushBack(&sl2, 6);
+	SeqListPushBack(&sl2, 8);
+	printf("%s", "s2£º");
+	SeqListPrint(&sl2);
+
+	SL sl3;
+	SeqListInit(&sl3);
+	printf("%s", "s3£º");
+	SeqListPrint(&sl3);
+	SameList_merge(&sl1,&sl2,&sl3);
+	printf("%s", "s3£º");
+	SeqListPrint(&sl3);
+}
+
+
+void problem8()
+{
+	SL sl;
+	SeqListInit(&sl);
+	SeqListPushBack(&sl, 1);
+	SeqListPushBack(&sl, 2);
+	SeqListPushBack(&sl, 3);
+	SeqListPushBack(&sl, 4);
+	SeqListPushBack(&sl, 6);
+	SeqListPushBack(&sl, 7);
+	SeqListPushBack(&sl, 8);
+	SeqListPushBack(&sl, 9);
+	SeqListPrint(&sl);
+
+	volu_m_n(&sl, 4,  4);
+	SeqListPrint(&sl);
+
+	SeqListDestory(&sl);
+}
+
 
 int main()
 {
@@ -105,6 +199,11 @@ int main()
 	// problem1();
 	// problem2();
 	// problem3();
-	problem4();
+	// problem4();
+	// problem5();
+	// problem6();
+	// problem7();
+	// problem8();
+	problem9();
 	return 0;
 }

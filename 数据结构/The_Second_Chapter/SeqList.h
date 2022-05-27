@@ -21,8 +21,12 @@ void SeqListPushFront(SL* ps, Elemtype x); // 头插
 void SeqListPopFront(SL* ps);                      // 头删
 void SeqListDestory(SL* ps);  // 销毁
 
-
+// 第二章习题
 int Del_Min(SL* ps);
 void reverse(SL* ps);
 void Del_x(SL* ps, Elemtype x);
-void Del_s_t(SL* ps, Elemtype s, Elemtype t);
+void Del_s_t_order(SL* ps, Elemtype s, Elemtype t);
+void Del_s_t_disorder(SL* ps, Elemtype s, Elemtype t);
+void Del_same(SL* ps);
+void SameList_merge(SL* ps1, SL* ps2, SL* ps3);
+void volu_m_n(SL* sp, int m , int n);

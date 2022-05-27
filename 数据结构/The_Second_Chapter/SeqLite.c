@@ -24,6 +24,7 @@ void SeqListDestory(SL* ps)
 	ps->Maxsize = ps->length = 0;
 }
 
+
 void SeqListCheckSize(SL* ps)
 {
 	// 如果 没有空间 或者 空间不足 ---> 扩容
@@ -40,6 +41,8 @@ void SeqListCheckSize(SL* ps)
 		ps->Maxsize = NewMaxsize;  // 更改最大容量
 	}
 }
+
+
 void SeqListPushBack(SL* ps, Elemtype x)
 {
 	SeqListCheckSize(ps);
@@ -59,6 +62,7 @@ void SeqListPopBack(SL* ps)
 
 }
 
+
 void SeqListPushFront(SL* ps, Elemtype x)
 {
 	// 考虑是否需要增容
@@ -74,6 +78,7 @@ void SeqListPushFront(SL* ps, Elemtype x)
 	ps->length++;
 }
 
+
 void SeqListPopFront(SL* ps)
 {
 	assert(ps->length > 0);
@@ -85,6 +90,7 @@ void SeqListPopFront(SL* ps)
 	}
 	ps->length--;
 }
+
 
 int Del_Min(SL* ps)
 {
@@ -157,13 +163,13 @@ void Del_x(SL* ps, Elemtype x)
 			ps->a[i - k] = ps->a[i];
 		}
 	}
-	ps->length = ps->length -k;
+	ps->length -= k;
 }
 
 
-void Del_s_t(SL* ps, Elemtype s, Elemtype t)
+void Del_s_t_order(SL* ps, Elemtype s, Elemtype t)
 {
-	// assert(ps->length != 0 & s < t & ps->a[0]>=s & ps->a[ps->length-1]>=t);
+	assert(ps->length != 0 && s < t && ps->a[0]<=s && ps->a[ps->length-1]>=t);
 	int s_ = 0;
 	int t_ = 0;
 	int z = 0;
@@ -188,4 +194,112 @@ void Del_s_t(SL* ps, Elemtype s, Elemtype t)
 		t_++;
 	}
 	ps->length = ps->length - k;
+}
+
+
+void Del_s_t_disorder(SL* ps, Elemtype s, Elemtype t)
+{
+	assert(ps->length != 0 && s < t);
+	int k = 0;
+	for (int i = 0; i < ps->length; i++)
+	{
+		if (ps->a[i] >= s && ps->a[i] <= t)
+		{
+			k++;
+		}
+		else
+		{
+			ps->a[i - k] = ps->a[i];
+		}
+	}
+	ps->length -= k;
+
+}
+
+
+void Del_same(SL* ps)
+{
+	int k = 0;
+	assert(ps->length > 0);
+	for (int i = 1; i < ps->length; i++)
+	{
+		if (ps->a[i-1] == ps->a[i])
+		{
+			k++;
+		}
+		else
+		{
+			ps->a[i-k] = ps->a[i];
+		}
+	}
+	ps->length -= k;
+}
+
+
+void SameList_merge(SL* ps1, SL* ps2, SL* ps3)
+{
+	SeqListCheckSize(ps3);
+	int i = 0, j = 0, k = 0;
+	while (i < ps1->length && j < ps2->length)
+	{
+		if (ps1->a[i] <= ps2->a[j])
+		{
+			SeqListCheckSize(ps3);
+			ps3->a[k++] = ps1->a[i++];
+		}
+		else
+		{
+			SeqListCheckSize(ps3);
+			ps3->a[k++] = ps2->a[j++];
+		}
+	}
+	while (i < ps1->length)
+	{
+		SeqListCheckSize(ps3);
+		ps3->a[k++] = ps1->a[i++];
+	}
+	while (j < ps2->length)
+	{
+		SeqListCheckSize(ps3);
+		ps3->a[k++] = ps2->a[j++];
+	}
+	ps3->length = k;
+}
+
+
+void volu_m_n(SL* ps, int m ,int n)
+{
+	assert(m + n == ps->length);
+	// 给前m个开辟单独空间盛放原本的前m个
+	Elemtype* m_ = NULL;
+	m_ = (Elemtype*)malloc(m * sizeof(Elemtype));
+	assert(m_);
+	for (int i = 0; i < m; i++)
+	{
+		*(m_ + i) = ps->a[i];
+	}
+
+	// 给后n个开辟单独空间盛放原本的后n个
+	Elemtype* n_ = NULL;
+	n_ = (Elemtype*)malloc(n * sizeof(Elemtype));
+	assert(n_);
+	for (int i = 0; i < n; i++)
+	{
+		*(n_ + i) = ps->a[m+i];
+	}
+
+	// 写两个for循环 更改原本的ps->a
+	for (int i = 0; i < m; i++)
+	{
+		ps->a[i] = *(n_ + i);
+	}
+	for (int i = m; i < ps->length; i++)
+	{
+		ps->a[i] = *(m_ + i - m);
+	}
+	// 释放内存
+	free(m_);
+	free(n_);
+	m_ = NULL;
+	n_ = NULL;
 }
