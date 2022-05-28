@@ -303,3 +303,14 @@ void volu_m_n(SL* ps, int m ,int n)
 	m_ = NULL;
 	n_ = NULL;
 }
+
+void reverse_arr(int arr[], int from, int to)
+{
+	int temp = 0;
+	for (int i = 0; i < (to - from + 1) / 2; i++)
+	{
+		temp = arr[from + i];
+		arr[from + i] = arr[to-i];
+		arr[to - i] = temp;
+	}
+}

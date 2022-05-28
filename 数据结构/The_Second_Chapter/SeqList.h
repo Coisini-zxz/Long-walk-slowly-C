@@ -30,3 +30,4 @@ void Del_s_t_disorder(SL* ps, Elemtype s, Elemtype t);
 void Del_same(SL* ps);
 void SameList_merge(SL* ps1, SL* ps2, SL* ps3);
 void volu_m_n(SL* sp, int m , int n);
+void reverse_arr(int arr[], int from , int to);

@@ -192,6 +192,17 @@ void problem8()
 	SeqListDestory(&sl);
 }
 
+void problem10()
+{
+	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9,10};
+	reverse_arr(arr, 0, 4);
+	reverse_arr(arr, 5, 9);
+	reverse_arr(arr, 0, 9);
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
 
 int main()
 {
@@ -204,6 +215,7 @@ int main()
 	// problem6();
 	// problem7();
 	// problem8();
-	problem9();
+	// problem9();
+	problem10();
 	return 0;
 }
