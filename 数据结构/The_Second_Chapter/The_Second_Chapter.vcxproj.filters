@@ -15,15 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SeqLite.c">
+    <ClCompile Include="SeqList.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Test.c">
+    <ClCompile Include="Test2.2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SListNode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Test2.3.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SeqList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SListNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

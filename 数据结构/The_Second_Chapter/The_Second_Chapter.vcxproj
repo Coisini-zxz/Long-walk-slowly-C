@@ -139,11 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SeqLite.c" />
-    <ClCompile Include="Test.c" />
+    <ClCompile Include="SeqList.c" />
+    <ClCompile Include="SListNode.c" />
+    <ClCompile Include="Test2.2.c" />
+    <ClCompile Include="Test2.3.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SeqList.h" />
+    <ClInclude Include="SListNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

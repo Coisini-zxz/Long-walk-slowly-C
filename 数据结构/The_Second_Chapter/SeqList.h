@@ -22,6 +22,7 @@ void SeqListPopFront(SL* ps);                      // 头删
 void SeqListDestory(SL* ps);  // 销毁
 
 // 第二章习题
+// 2.2节
 int Del_Min(SL* ps);
 void reverse(SL* ps);
 void Del_x(SL* ps, Elemtype x);

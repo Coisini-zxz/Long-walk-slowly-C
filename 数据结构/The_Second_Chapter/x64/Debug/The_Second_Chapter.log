@@ -1,2 +1,8 @@
-﻿  Test.c
+﻿  SListNode.c
+D:\Long-walk-slowly-C\数据结构\The_Second_Chapter\SListNode.c(10,18): warning C4133: “=”: 从“SinglyLinkList *”到“SLTNode *”的类型不兼容
+D:\Long-walk-slowly-C\数据结构\The_Second_Chapter\SListNode.c(32,21): warning C4133: “=”: 从“SinglyLinkList *”到“SLTNode *”的类型不兼容
+D:\Long-walk-slowly-C\数据结构\The_Second_Chapter\SListNode.c(34,23): warning C4133: “=”: 从“SLTNode *”到“SinglyLinkList *”的类型不兼容
+D:\Long-walk-slowly-C\数据结构\The_Second_Chapter\SListNode.c(55,21): warning C4133: “=”: 从“SinglyLinkList *”到“SLTNode *”的类型不兼容
+  Test2.3.c
+  正在生成代码...
   The_Second_Chapter.vcxproj -> D:\Long-walk-slowly-C\数据结构\The_Second_Chapter\x64\Debug\The_Second_Chapter.exe
